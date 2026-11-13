@@ -5,9 +5,25 @@ terraform destroy -> delete the infra
 
 
 set TF_VAR_<var_name>="value" --> env variablees
+====================or=========================
+export TF_VAR_instance_type="t3.micro"  --> env variablees
 
 1. default values
 2. terraform.tfvars or *.tfvars
 3. env variablees
 4. command line
+5. prompt
+
+
+default -> t3.micro
+terraform.tfvars -> t3.small
+env variable -> t3.medium
+command line -> t3.large
+
+prefernce
+===========
+1. command line
+2. tfvars
+3. env variable
+4. default
 5. prompt
