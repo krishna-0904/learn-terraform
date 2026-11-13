@@ -14,9 +14,20 @@ variable "instance_type" {
 variable "ec2_tags" {
     type = map 
     default = {
-        Name = "roboshop-web"
+        Name = "roboshop-mongodb"
         Environment = "dev"
         Terraform = "true"
+        Project = "roboshop"
+        Component = "mongodb"
     }
-    description = "tags for the instance"
+}
+
+variable "cidr" {
+    type = list 
+    default = ["0.0.0.0/0"]
+}
+
+variable "from_port" {
+    type = number 
+    default = 0
 }
