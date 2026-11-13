@@ -16,7 +16,7 @@ variable "ec2_tags" {
     default = {
         Name = "roboshop-web"
         Environment = "dev"
-        Terraform = :true
+        Terraform = "true"
     }
     description = "tags for the instance"
 }
