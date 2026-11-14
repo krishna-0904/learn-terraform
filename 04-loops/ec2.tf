@@ -28,7 +28,7 @@ resource "aws_security_group" "common" {
 }
 
 
-/* resource "aws_security_group" "roboshop" {
+resource "aws_security_group" "roboshop" {
   count =4
   name        = "${var.project}-${var.environment}-common"
   description = "A common SG for all the instances"
@@ -50,4 +50,4 @@ resource "aws_security_group" "common" {
   tags = {
     Name = "${var.project}-${var.environment}-common"
   }
-} */
+}
