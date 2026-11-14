@@ -1,5 +1,5 @@
 variable "environment" {
-    default = "env"
+    default = "dev"
 }
 
 
