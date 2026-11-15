@@ -36,3 +36,9 @@ variable "ec2_tags" {
         Component = "mongodb"
     }
 }
+
+variable "instances" {
+    type = list 
+    default = ["mongodb" , "mysql" , "redis" , "rabbitmq"]
+    description = "list of instances to be created"
+}
