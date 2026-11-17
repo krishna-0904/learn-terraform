@@ -42,3 +42,12 @@ variable "instances" {
     default = ["mongodb" , "mysql" , "redis" , "rabbitmq"]
     description = "list of instances to be created"
 }
+
+
+variable "zone_id" {
+    default = "Z016676720U1BMLPXGC61"
+}
+
+variable "domain_name" {
+    default = "depops.online"
+}
