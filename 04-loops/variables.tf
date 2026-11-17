@@ -39,7 +39,8 @@ variable "ec2_tags" {
 
 variable "instances" {
     type = list 
-    default = ["mongodb" , "mysql" , "redis" , "rabbitmq"]
+    #default = ["mongodb" , "mysql" , "redis" , "rabbitmq"]
+    default = ["mongodb" , "mysql" , "redis" , "frontend"]
     description = "list of instances to be created"
 }
 

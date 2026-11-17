@@ -5,6 +5,7 @@ resource "aws_route53_record" "roboshop" {
     type = "A"
     ttl = 1
     records = [aws_instance.roboshop[count.index].private_ip]
+    #allow_overwrite = true -->> it will allow to overwrite the existing record if it already exists in the zone.
 }
 
 resource "aws_route53_record" "frontend" {
@@ -14,4 +15,5 @@ resource "aws_route53_record" "frontend" {
     type = "A"
     ttl = 1
     records = [aws_instance.roboshop[index(var.instances, "frontend")].public_ip]
+    #allow_overwrite = true
 }
