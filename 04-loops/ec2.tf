@@ -1,5 +1,6 @@
 resource "aws_instance" "roboshop" {
-  count         = 4
+  #count         = 4
+  count = length(var.instances)
   instance_type = var.instance_type
   ami           = var.ami_id
   vpc_security_group_ids = [
@@ -30,7 +31,8 @@ resource "aws_security_group" "common" {
 
 
 resource "aws_security_group" "roboshop" {
-  count       = 4
+  #count       = 4
+  count       = length(var.instances)
   name        = "${var.project}-${var.environment}-${var.instances[count.index]}"
   description = "A component SG for the instances of roboshop project"
 
